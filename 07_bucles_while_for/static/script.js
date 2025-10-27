@@ -89,3 +89,23 @@ function imprimirMultiplos(){
     }
     alert(`${resultado}`)
 }
+
+
+/*5️⃣ Bucle for: Tabla de multiplicar
+Pide un número al usuario e imprime su tabla de multiplicar del 1 al 10 en un solo alert.
+
+Ejemplo de resultado:
+Tabla del 5
+5 x 1 = 5
+5 x 2 = 10
+...
+5 x 10 = 50*/
+
+function tablasMultiplicar() {
+    let numero = parseInt(prompt("Ingresar Numero"));
+    let tablas = ` Tabla de ${numero}: ` ; 
+    for(let i = 1; i <= 10; i++){
+         tablas += `\n ${numero} x ${i} = ${numero * i}`
+    }
+    alert(tablas);
+}
