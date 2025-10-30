@@ -48,7 +48,7 @@ Crea un programa que muestre una cuenta regresiva desde n hasta 1 utilizando un 
 function cuentaRegresiva() {
     let contador = parseInt(prompt("Ingresar Numero"));
     let resultado = "contamos: "
-    while (contador > 0 ) {
+    while (contador > 0) {
         resultado += ` ${contador}`;
         contador--;
     }
@@ -70,20 +70,20 @@ function sumarNumeros() {
         resultado += ` + ${contador}`;
         contador++
     }
-    alert (` ${resultado} = ${suma}`);
+    alert(` ${resultado} = ${suma}`);
 }
 
 /*4️⃣ Bucle while: Imprimir múltiplos de 2 del 1 al n (n es el límite de números a encontrar)
 Escribe un programa que use un bucle for para imprimir los múltiplos de 2 que hay entre 1 y 10 (inclusive).*/
 
-function imprimirMultiplos(){
+function imprimirMultiplos() {
     let numero = parseInt(prompt("Ingresar Numero"));
     let count = 1;
     let resultado = "El resultado es: "
     while (count <= numero) {
         count++
 
-        if (count %2 == 0) {
+        if (count % 2 == 0) {
             resultado += `${count}`
         }
     }
@@ -103,9 +103,85 @@ Tabla del 5
 
 function tablasMultiplicar() {
     let numero = parseInt(prompt("Ingresar Numero"));
-    let tablas = ` Tabla de ${numero}: ` ; 
-    for(let i = 1; i <= 10; i++){
-         tablas += `\n ${numero} x ${i} = ${numero * i}`
+    let tablas = ` Tabla de ${numero}: `;
+    for (let i = 1; i <= 10; i++) {
+        tablas += `\n ${numero} x ${i} = ${numero * i}`
     }
     alert(tablas);
+}
+
+/*6️⃣ Bucle for: Números pares hasta n
+Solicita un número n e imprime todos los números pares desde 1 hasta n usando un bucle for.
+
+Ejemplo de resultado:
+2, 4, 6, 8, 10*/
+
+function par() {
+    let num = parseInt(prompt("ingresar Numero"))
+    let resultado = ` los nunmeros pares de ${num} son:`;
+
+    for (let i = 1; i <= num; i++) {
+        if (i % 2 == 0) {
+            resultado += ` ${i}`
+        }
+    }
+    alert(resultado);
+}
+
+
+
+/*7️⃣ Bucle for: Contar letras de una palabra
+Pide una palabra al usuario y muestra cuántas letras tiene usando un bucle for para recorrerla.
+
+Ejemplo de resultado:
+La palabra "Programación" tiene 12 letras. */
+
+function contarLetras() {
+    let word = prompt("ingresa numero");
+    let cont = 0;
+    for (let i = 0; i < word.length; i++) {
+        cont++
+    }
+    alert(`la palabra "${word} tiene ${cont} letras."`)
+}
+
+
+
+/*8️⃣ Bucle for: Calcular factorial
+Solicita un número n e imprime el factorial de ese número (n × n-1 × n-2 × … × 1) usando un bucle for.
+
+Ejemplo de resultado:
+El factorial de 5 es 120. */
+
+function calcularFactorial() {
+    let numero = parseInt(prompt("Ingresar numero para calcular factorial"));
+    let factorial = 1;
+    let largo = "1";
+    for (let i = 2; i <= numero; i++) {
+        largo += `* ${i}`
+        factorial *= i;
+    }
+    alert(`el factorial de ${numero} es : ${largo} = ${factorial}`)
+}
+
+
+/*9️⃣ Bucle for: Suma de números impares hasta n
+Pide un número n y suma todos los números impares desde 1 hasta n.
+Muestra el resultado con alert.
+
+Ejemplo de resultado:
+La suma de impares hasta 9 es 25. */
+
+
+function numerosImpares() {
+    let numero = parseInt(prompt("Ingresar Numero"));
+    let respuesta = 1;
+    let largoImpar = "1"
+    for (let i = 2; i <= numero; i++) {
+        if (i % 2 != 0) {
+            respuesta += i
+            largoImpar += ` + ${i}`
+        }
+    }
+    alert(`las sumas de ${largoImpar} = ${respuesta}`)
 }
